@@ -6,12 +6,10 @@ import com.aetherteam.enhanced_extinguishing.block.ExtinguishingBlocks;
 import com.aetherteam.enhanced_extinguishing.data.providers.ExtinguishingRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 
 public class ExtinguishingRecipeData extends ExtinguishingRecipeProvider {
     public ExtinguishingRecipeData(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {

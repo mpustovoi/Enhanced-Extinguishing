@@ -7,7 +7,7 @@ issueTrackerURL="https://github.com/The-Aether-Team/Enhanced-Extinguishing/issue
 modId = "aether_enhanced_extinguishing"
 version = "${file.jarVersion}"
 displayName = "Enhanced Extinguishing"
-updateJSONURL="https://github.com/The-Aether-Team/Enhanced-Extinguishing/raw/1.20.2-develop/update.json"
+updateJSONURL="https://github.com/The-Aether-Team/Enhanced-Extinguishing/raw/1.20.4-develop/update.json"
 displayURL = "https://modrinth.com/mod/aether-enhanced-extinguishing"
 logoFile ="enhanced_extinguishing_icon.png"
 credits = "The Aether Team"
@@ -16,19 +16,19 @@ description = '''Improves the consistency of fire being disallowed in the Aether
 
 [[dependencies.aether_enhanced_extinguishing]]
     modId="neoforge"
-    mandatory=true
-    versionRange="[20.2.0,)"
+    type = "required"
+    versionRange="[20.4.167,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.aether_enhanced_extinguishing]]
     modId = "aether"
-    mandatory = true
-    versionRange = "[1.20.1-1.0.0-beta.1-forge,)"
+    type = "required"
+    versionRange = "[1.20.4-1.4.0-neoforge,)"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.aether_enhanced_extinguishing]]
     modId = "minecraft"
-    mandatory = true
-    versionRange="[1.20.2,1.20.3)"
+    type = "required"
+    versionRange="[1.20.4]"
     ordering = "NONE"
     side = "BOTH"

@@ -1,9 +1,8 @@
 package com.aetherteam.enhanced_extinguishing.data.providers;
 
-import com.aetherteam.aether.recipe.AetherRecipeSerializers;
 import com.aetherteam.aether.recipe.builder.BiomeParameterRecipeBuilder;
+import com.aetherteam.aether.recipe.recipes.block.PlacementConversionRecipe;
 import com.aetherteam.nitrogen.recipe.BlockStateIngredient;
-import com.aetherteam.nitrogen.recipe.builder.BlockStateRecipeBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -26,7 +25,7 @@ public abstract class ExtinguishingRecipeProvider extends RecipeProvider {
         return new ResourceLocation(ID, name);
     }
 
-    protected static BlockStateRecipeBuilder convertPlacement(Block result, Block ingredient, TagKey<Biome> biome) {
-        return BiomeParameterRecipeBuilder.recipe(BlockStateIngredient.of(ingredient), result, biome, AetherRecipeSerializers.PLACEMENT_CONVERSION.get());
+    protected static BiomeParameterRecipeBuilder convertPlacement(Block result, Block ingredient, TagKey<Biome> biome) {
+        return BiomeParameterRecipeBuilder.recipe(BlockStateIngredient.of(ingredient), result, biome, PlacementConversionRecipe::new);
     }
 }
